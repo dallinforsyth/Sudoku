@@ -42,5 +42,12 @@ function setGame() {
     document.getElementById("digits").appendChild(number);
   }
   //baord 9x9
-  for (let r = 0)
+  for (let r = 0; r < 9; r++) {
+    for (let e = 0; e < 9; e++) {
+      let tile = document.createElement("div");
+      tile.id = r.toString() + e.toString();
+      tile.classList.add("tile");
+      document.getElementById("board").append(tile);
+    }
+  }
 }
