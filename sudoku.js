@@ -51,3 +51,5 @@ function setGame() {
     }
   }
 }
+
+function selectNumber() {}
