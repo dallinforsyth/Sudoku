@@ -47,6 +47,7 @@ function setGame() {
     for (let e = 0; e < 9; e++) {
       let tile = document.createElement("div");
       tile.id = r.toString() + e.toString();
+      tile.innerText = board[r][e];
       tile.addEventListener("click", selectTile);
       tile.classList.add("tile");
       document.getElementById("board").append(tile);
