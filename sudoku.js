@@ -47,6 +47,7 @@ function setGame() {
     for (let e = 0; e < 9; e++) {
       let tile = document.createElement("div");
       tile.id = r.toString() + e.toString();
+      tile.addEventListener("click", selectTile);
       tile.classList.add("tile");
       document.getElementById("board").append(tile);
     }
@@ -59,4 +60,13 @@ function selectNumber() {
   }
   numSelected = this;
   numSelected.classList.add("number-selected");
+}
+
+function selectTile() {
+  if (numSelected) {
+    if (this.innerText !== "") {
+      return;
+    }
+    this.innerText = numSelected.id;
+  }
 }
