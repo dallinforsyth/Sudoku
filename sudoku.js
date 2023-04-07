@@ -38,6 +38,7 @@ function setGame() {
     let number = document.createElement("div");
     number.id = i;
     number.innerText = i;
+    number.addEventListener("click", selectNumber);
     number.classList.add("number");
     document.getElementById("digits").appendChild(number);
   }
