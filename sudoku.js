@@ -41,4 +41,6 @@ function setGame() {
     number.classList.add("number");
     document.getElementById("digits").appendChild(number);
   }
+  //baord 9x9
+  for (let r = 0)
 }
