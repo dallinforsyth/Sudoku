@@ -52,4 +52,10 @@ function setGame() {
   }
 }
 
-function selectNumber() {}
+function selectNumber() {
+  if (numSelected != null) {
+    numSelected.classList.remove("number-selected");
+  }
+  numSelected = this;
+  numSelected.classList.add("number-selected");
+}
