@@ -42,12 +42,14 @@ function setGame() {
     number.classList.add("number");
     document.getElementById("digits").appendChild(number);
   }
-  //baord 9x9..
+  //baord 9x9
   for (let r = 0; r < 9; r++) {
     for (let e = 0; e < 9; e++) {
       let tile = document.createElement("div");
       tile.id = r.toString() + e.toString();
-      tile.innerText = board[r][e];
+      if (board[r][e] !== "-") {
+        tile.innerText = board[r][e];
+      }
       tile.addEventListener("click", selectTile);
       tile.classList.add("tile");
       document.getElementById("board").append(tile);
