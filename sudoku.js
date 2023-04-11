@@ -51,6 +51,12 @@ function setGame() {
         tile.innerText = board[r][e];
         tile.classList.add("tile-start");
       }
+      if (r === 2 || r === 5) {
+        tile.classList.add("horizontal-line");
+      }
+      if (e === 2 || e === 5) {
+        tile.classList.add("vertical-line");
+      }
       tile.addEventListener("click", selectTile);
       tile.classList.add("tile");
       document.getElementById("board").append(tile);
@@ -65,7 +71,6 @@ function selectNumber() {
   numSelected = this;
   numSelected.classList.add("number-selected");
 }
-
 function selectTile() {
   if (numSelected) {
     if (this.innerText !== "") {
