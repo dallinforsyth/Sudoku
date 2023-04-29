@@ -90,6 +90,12 @@ function selectTile() {
       errors += 1;
       document.getElementById("errors").innerText = errors;
     }
+    if (solution[r][c] == numSelected.id) {
+      this.innerText = numSelected.id;
+    } else {
+      errors += 1;
+      document.getElementById("errors").innerText = errors;
+    }
   }
 }
 ///
